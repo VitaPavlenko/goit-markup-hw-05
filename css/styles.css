@@ -54,6 +54,9 @@ ul {
   color: var(--title-text-color);
   margin-right: 50px;
   fill: var(--title-text-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-adress-link:last-child {
@@ -115,6 +118,9 @@ ul {
   border-left: 1px solid #ececec;
   border-right: 1px solid #ececec;
   padding: 20px 24px;
+  transition-property:box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .border:hover {
@@ -142,6 +148,10 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .site-naw:hover,
@@ -189,6 +199,10 @@ ul {
 
 .connect {
   color: var(--title-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .connect:hover,
@@ -202,7 +216,21 @@ ul {
 
 .container-header {
   border-bottom: 1px solid #ececec;
+ 
 }
+
+  .current::after{
+  content: "";
+  background-color: var(--accent-color);
+  height: 2px;
+  width: 78px;
+  position: absolute;
+  top: 80px;
+  }
+ 
+
+
+ 
 
 /* Герой */
 
@@ -258,6 +286,10 @@ ul {
   letter-spacing: 0.03em;
   border-radius: 4px;
   border: none;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .button.secondary:hover,
@@ -331,11 +363,30 @@ ul {
 
 .imgs-list {
   margin-left: 30px;
+  position: relative;
 }
 
 .imgs-list:first-child {
   margin-left: 0;
 }
+
+.top-text{
+
+position: absolute;
+font-size: 14px;
+ line-height: 1.14;
+ background-color: rgba(47, 48, 58, 0.8);
+ width: 370px; 
+ height: 70px;
+ top: 224px;
+ color: var(--accent-whiter-color);
+ text-align: center;
+ text-transform: uppercase;
+ padding-top:27px;
+
+
+}
+
 
 /* Команда */
 
@@ -388,6 +439,9 @@ ul {
   justify-content: center;
   align-items: center;
   fill: #afb1b8;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .command-item:last-child {
@@ -402,7 +456,8 @@ ul {
   background-position: center;
 }
 
-.command-item:hover {
+.command-item:hover, 
+.command-item:focus {
   background-color: var(--accent-color);
   fill: var(--primary-bg-color);
 }
@@ -424,10 +479,16 @@ ul {
   height: 92px;
   justify-content: center;
   align-items: center;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-clients {
   fill: #afb1b8;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .not-margin {
@@ -494,17 +555,46 @@ ul {
   margin-left: 30px;
   margin-bottom: 30px;
   flex-basis: calc((100% - 90px) / 3);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .port-hd-list:hover {
   box-shadow: 1px 4px rgba(0, 0, 0, 0.16), 0px 4px rgba(0, 0, 0, 0.06), 0px 1px rgba(0, 0, 0, 0.12);
 }
 
-.port-img {
+.port-hd-list:hover .port-top-item {
+transform: translateY(0);
+
+}
+
+.port-img { 
   display: block;
   margin: 0;
   padding: 0;
+  }
+
+.port-top-text{
+position: relative;
+ overflow: hidden;
 }
+
+.port-top-item{
+position: absolute;
+top: 0;
+left: 0;
+font-size: 18px;
+line-height: 1.55;
+ width: 370px;
+ height: 100%;
+ background-color: rgba(33, 150, 243, 0.9);
+ color: var(--accent-whiter-color);
+ padding: 24px 63px;
+ transform: translateY(100%);
+ transition: transform 300ms linear;
+}
+
 /* Подвал */
 .footer-title {
   padding-top: 60px;
@@ -521,11 +611,17 @@ ul {
 .ad-list {
   color: var(--accent-whiter-color);
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ft-list {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pf-list-li {
@@ -571,6 +667,9 @@ ul {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sn-item:last-child {
@@ -643,3 +742,8 @@ ul {
   border-radius: 50%;
   border: 1px solid #afb1b8;
 }
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    {
