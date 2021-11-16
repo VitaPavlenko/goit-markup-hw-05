@@ -686,7 +686,8 @@ line-height: 1.55;
   fill: var(--primary-bg-color);
 }
 
-.sn-item:hover {
+.sn-item:hover,
+.sn-item:focus {
   background-color: var(--accent-color);
 }
 
